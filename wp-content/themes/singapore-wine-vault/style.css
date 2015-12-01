@@ -1,0 +1,321 @@
+/**
+ * Theme Name: Singapore Wine Vault
+ * Description: A custom responsive theme for SINGAPORE WINE VAULT company.
+ * Author: AllFamous
+ * Author URI: http://allfamous.com
+ *
+ * Text Domain: swv
+ **/
+
+* {
+        word-wrap: break-word;
+}
+body, 
+img, 
+object, 
+iframe,
+table,
+video {
+        max-width: 100%;
+        color: #1a181a;
+}
+img {
+        height: auto;
+}
+h1,h2,h3,h4,h5,h6,.page-title,.entry-title,.heading-title {
+        margin-top: 0;
+}
+h1 {
+        font-size: 28px;
+}
+h2 {
+        font-size: 26px;
+}
+h3 {
+        font-size: 24px;
+}
+h4 {
+        font-size: 22px;
+}
+h5 {
+        font-size: 20px;
+}
+h6 {
+        font-size: 16px;
+}
+label {
+        font-weight: 200 !important;
+}
+input, select, textarea {
+        padding: 5px 10px;
+        max-width: 100%;
+        margin-bottom: 5px;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        font-size: 13px;
+        border: 1px #EEE solid;
+}
+input[type=checkbox], input[type=radio] {
+        padding: 0;
+        width: auto;
+        max-width: auto;
+}
+[type=submit], [type=button], [type=reset], .btn, .button {
+        width: auto;
+        max-width: 100%;
+        background: transparent !important;
+        color: #C4B258;
+        border: 2px #C4B258 solid;
+}
+[type=submit]:hover, [type=button]:hover, [type=reset]:hover, .btn:hover, .button:hover, #main-footer .widget .btn {
+        background: transparent !important;
+        color: #C4B258;
+}
+table {
+        width: 100%;
+        max-width: 100%;
+}
+table td, table th {
+        padding: 5px;
+}
+blockquote { 
+	       color: #111; 
+        border: 0;
+	       quotes: "\201C" "\201D"; 
+	       width: 90%; 
+	       margin: 15px 0 15px 25px;
+}
+blockquote:before {
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.8em;
+	margin-left: -0.6em;
+	vertical-align: -0.4em;
+	float: left;
+}
+blockquote cite {
+        display: block;
+        font-size: 14px;
+        margin: 10px 0;
+}
+ul, ol {
+        margin: 15px 0;
+        padding: 0 0 0 15px;     
+}
+ul ul, 
+ol ol,
+ul ol,
+ol ul {
+        padding-left: 25px;
+        margin: 0;
+}
+/******************
+ * Common styles
+ ********************/
+#page {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        max-width: 100%;
+        overflow: hidden;
+}
+.container {
+        width: 100%;
+        max-width: 1192px;
+}
+.alignleft {
+        float: left;
+        margin: 0 15px 15px 0;
+}
+.alignright {
+        float: right;
+        margin: 0 0 15px 15px;
+}
+.aligncenter {
+        display: block;
+        clear: both;
+        margin: 15px auto;
+}
+.alignnone {
+        margin: 15px 0;
+        display: block;
+        clear: both;
+}
+.flat,
+.btn-flat,
+.nav ul ul li a {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+}
+.capsule, 
+.nav-capsule li a {
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+}
+.raised {
+        -webkit-box-shadow: 0px 0px 3px #999;
+        -moz-box-shadow: 0px 0px 3px #999;
+        box-shadow: 0px 0px 2px 2px #999;
+}
+.drop {
+        -webkit-box-shadow: 0px 0px 3px #999;
+        -moz-box-shadow: 0px 0px 3px #999;
+        box-shadow: 0px 6px 6px -6px #999;
+}
+.clear-after:after {
+        content: "";
+        display: block;
+        clear: both;
+}
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+.skip-link {
+	background-color: #f1f1f1;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+	color: #21759b;
+	display: block;
+	font: bold 14px/normal "Noto Sans", sans-serif;
+	left: -9999em;
+	outline: none;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	text-transform: none;
+	top: -9999em;
+}
+
+/**********
+ * HEADER
+ *****************/
+#main-header {
+        margin-bottom: 20px;
+        background-color: #000;
+        border-bottom: 5px #BD8F2D solid;
+}
+.top-header {
+        background-color: #c4b258;
+        padding: 5px 0;
+}
+.top-header .social-link {
+        font-size: 20px;
+        display: inline-block;
+        width: 35px;
+        color: #1c1a1c !important;
+}
+#main-header .social-container {
+        text-align: right;
+}
+#main-footer .social-container {
+        text-align: left;
+}
+.main-header-container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+}
+.masthead, .header-container {
+        position: relative;
+}
+.masthead {
+        padding-top: 0;
+        -webkit-transition: padding-top 0.4s ease-in-out;
+        -moz-transition: padding-top 0.4s ease-in-out;
+        -o-transition: padding-top: 0.4s ease-in-out;
+        transition: padding-top 0.4s ease-in-out;
+        transform: translated3d(0,0,0);
+}
+.site_logo {
+        display: block;
+        vertical-align: middle;
+}
+.site_logo img {
+        max-height: 70px;
+        max-width: 180px;
+}
+.navbar-toggle {
+        position: absolute;
+        top: -47px;
+        right: 0;
+        max-width: 30%;
+        font-size: 12px;
+        text-transform: uppercase;
+        border: 0;
+        margin: 0;
+        z-index: 99;
+        border-radius: 3px;
+        background-color: #C4B258 !important;
+}
+#navigation {
+        display: none;
+}
+#navigation .nav {
+        margin:0;
+        font-size: 16px;
+}
+#navigation .menu-item a {
+        color: #C4B258;
+        backgrond-color: transparent;
+}
+#navigation .menu-item a:hover {
+        background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+        .main-header-container {
+                font-size: 0;
+        }
+        #navigation {
+                display: block;
+                clear: both;
+        }
+        #navigation .last-item a {
+                padding-right: 0;
+        }
+}
+@media screen and (min-width: 768px) {
+        .masthead, .header-container {
+                display: inline-block;
+                vertical-align: middle;
+                width: 25%;
+        }
+        .header-container {
+                width: 75%;
+        }      
+        #navigation .nav {
+                float: right;
+        }
+}
+/*******
+ * Widgets
+ ***********/
+.widget {
+        margin-bottom: 20px;
+}
+.widget-title {
+        margin-top: 0;
+        font-size: 18px;
+}
+
+/*******
+ * Footer
+ ****************/
+#main-footer {
+        background-color: #333;
+        padding-top: 20px;
+        color: #FFF;
+}
+#main-footer .widget-title {
+        color: #C4B258;
+}
+#main-footer ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+}
+#main-footer a {
+        color: #FFF;
+}
