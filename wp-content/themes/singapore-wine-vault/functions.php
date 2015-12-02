@@ -24,11 +24,36 @@
         }
         add_action( 'after_setup_theme', 'swv_setup' );
  endif;
- 
- if( ! function_exists( 'swv_widgets_init' ) ):
+
  /*********
   * Register sidebars and widgets
   *******************************/
+if (function_exists('register_sidebar'))
+{
+    // Define Right Sidebar
+    register_sidebar(array(
+        'name' => __('Right Sidebar', 'swv'),
+        'description' => __('Right Sidebar', 'swv'),
+        'id' => 'right-sidebar',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
+    // Define Left Sidebar
+    register_sidebar(array(
+        'name' => __('Left Sidebar', 'swv'),
+        'description' => __('Left Sidebar', 'swv'),
+        'id' => 'widget-area-2',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+ 
+ if( ! function_exists( 'swv_widgets_init' ) ):
  
         function swv_widgets_init(){
                 $sidebar = array(
