@@ -61,7 +61,7 @@
  * 
  *******************************************************************************************/
         function swv_site_option($option_name, $default_value = '', $default = '' ){
-                $option_name = "naked_{$option_name}";
+                $option_name = "swv_{$option_name}";
                 $value = get_theme_mod( $option_name, $default );
                 
                 return empty( $value ) ? $default_value : $value;
