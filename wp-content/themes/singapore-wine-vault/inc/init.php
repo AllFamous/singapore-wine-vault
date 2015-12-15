@@ -168,3 +168,12 @@ if( ! function_exists( 'swv_assets' ) ):
         
 endif;
 
+ function swv_excerpt_length( $length ){
+        return 20;
+ }
+ add_filter( 'excerpt_length', 'swv_excerpt_length' );
+ 
+ function swv_excerpt_more($more){
+        return '...';
+ }
+ add_filter( 'excerpt_more', 'swv_excerpt_more' );

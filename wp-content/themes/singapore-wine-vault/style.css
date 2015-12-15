@@ -438,19 +438,18 @@ section .container {
         background: url(assets/imgs/homebg-4.png) no-repeat center top;
         background-size: auto 170px;
 }
-#home-section-6 .entry-title {
+.entry-title {
         font-size: 22px;
         line-height: 1.2;
         max-width: 300px;
         text-align: center;
         margin: 15px auto;
 }
-#home-section-6 .featured-image img {
+.featured-image img {
         text-align: center;
         margin: 0 auto;
-
 }
-#home-section-6 .entry-title a {
+.entry-title a {
         color: #1A181A;
 }
 .author-meta {
@@ -458,6 +457,13 @@ section .container {
 }
 .category-meta, .category-meta a {
         color: #666;
+}
+article {
+        margin-bottom: 35px;
+}
+.entry-content {
+        max-width: 350px;
+        margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
         #home-section-1 .page-header {
@@ -508,4 +514,29 @@ section .container {
         #home-section-6 {
                 background-size: 100% auto;
         }
+}
+.top-content {
+        background-color: #EEE;
+}
+.blog-menu {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+}
+.blog-menu .navbar-nav {
+        position: relative;
+        float: none;
+        width: auto;
+        text-align: center;
+        margin: 0 auto;
+}
+.blog-menu .nav li {
+        float: none;
+        display: inline-block;
+}
+.main-content {
+        padding-top: 25px;
+}
+.right-sidebar {
+        padding-top: 25px;
 }

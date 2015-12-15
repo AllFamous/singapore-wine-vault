@@ -19,16 +19,17 @@
                 
                 # This theme only supports 1 menu
                 register_nav_menus(array(
-                        'primary' => __('Main Navigation', 'swv')
+                        'primary' => __('Main Navigation', 'swv'),
+                        'blog_menu' => __('Blog Menu', 'swv')
                 ));
         }
         add_action( 'after_setup_theme', 'swv_setup' );
  endif;
- 
- if( ! function_exists( 'swv_widgets_init' ) ):
+
  /*********
   * Register sidebars and widgets
   *******************************/
+ if( ! function_exists( 'swv_widgets_init' ) ):
  
         function swv_widgets_init(){
                 $sidebar = array(
@@ -38,6 +39,20 @@
                         'after_title'   => '</h3>'
                 );
                 
+                // Define Left Sidebar
+                register_sidebar( array_merge($sidebar, array(
+                    'name' => __('Left Sidebar', 'swv'),
+                    'description' => __('Left Sidebar', 'swv'),
+                    'id' => 'widget-area-2'
+                )));
+                
+                // Define Right Sidebar
+                register_sidebar(array_merge( $sidebar, array(
+                    'name' => __('Right Sidebar', 'swv'),
+                    'description' => __('Right Sidebar', 'swv'),
+                    'id' => 'right-sidebar'
+                )));
+            
                 for($i=1; $i <= 4; $i++ ){
                         register_sidebar( array_merge( array(
                                 'id'          => "footer-{$i}",
@@ -46,6 +61,7 @@
                         ), $sidebar ));
                         
                 }
+                
         }
         add_action( 'widgets_init', 'swv_widgets_init' );
  
